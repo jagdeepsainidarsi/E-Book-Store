@@ -1,0 +1,91 @@
+
+body
+{
+    margin:0;
+    font-family: emoji;
+}
+#quote_section
+{
+    min-height: 500px;
+    height: auto;
+    /* background: url("https://cms.bitlab.host/api/data/72/categories/101/background-image.jpg");
+    background-size: 100% 100%; */
+    padding: 1% 3%;
+    margin: 0;
+}
+#quote_section h1
+{
+    text-align: center;
+    color: white;
+    text-decoration: underline rgb(211, 76, 36);
+    font-size: 35px;
+}
+#quote_content_div
+{
+    float:left;
+    color:skyblue;
+    width: 60%;
+    height: auto;
+    max-height: 60%;
+    padding:5% 2%;
+    font-weight: bold;
+}
+
+#quote_content_div label
+{
+    font-size: 30px;
+    color: rgb(211, 76, 36);
+}
+#quote_content
+{
+    display: inline;
+    font-size: 30px;    
+}
+#quote_by_div
+{
+    float:right;
+    display: block;
+    font-weight: bold;
+    width: 50%;
+    text-align:right;
+    margin-right: 5%;
+}
+
+#quote_by
+{
+    display: inline;
+    font-size: 25px; 
+    color: white;
+    text-decoration: underline rgb(211, 76, 36);
+    background: rgb(211, 76, 36);
+    padding: 2%;
+}
+@media all and (max-width:580px)
+{
+    #quote_section h1
+    {
+        font-size: 30px;
+    }
+    #quote_section
+    {
+        min-height: 470px;
+        height: auto;
+    }
+    #quote_content_div
+    {
+        width: 100%;
+    }
+    #quote_by_div
+    {
+        width: 100%;
+        margin-top: 3%;
+    }
+    #quote_content
+    {
+        font-size: 22px;
+    }
+    #quote_by
+    {
+        font-size: 20px;
+    }
+}

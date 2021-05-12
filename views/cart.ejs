@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="cart.css" rel="stylesheet" type="text/css"/>
+          <link href="buycart.css" rel="stylesheet" type="text/css"/>
+         
+    </head>
+        <body>
+     
+        <div class="alert1" id="alert_msg1" style="position:fixed;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        </div>
+        <div class="loading" id="loading"><div class="loader"></div></div>
+        
+            <%- include ('header') %>
+            
+            <div class="cartdiv">
+            <a id="orderdetail" style="font-size:20px" href="/orderdetail" >Order Details<i style="font-size:24px;position:relative;top: 1.5;margin-left: 2px;" class="fa">&#xf138;</i></a>
+            <div class="cartheading">
+            <h1>Welcome in Cart!</h1>
+            </div>
+            <div class="items" id="itemsInCart">
+            <div class="noitem" id="noitem">
+            <h1>No item in cart!</h1>
+            </div>
+
+
+            </div>
+            </div>
+        <div id="containerbuy" class="containerbuy">
+
+  <div class="containerinsidebuy">
+       <span class="close">&times;</span>
+      <div class="innerpartbuy">
+      <div class="leftbuy">
+          <h2>Personal Details</h2>
+      <div class="firstname">
+  <label class="finput">
+      <input style="cursor: no-drop;" class="finput__field" type="text" id="firstname" readonly />
+      <span class="finput__label">FirstName</span>
+    </label>
+    </div>
+     <div class="firstname">
+  <label class="finput">
+    <input style="cursor: no-drop;" class="finput__field" type="text" id="email"  readonly/>
+        <span class="finput__label">Email</span>
+    </label>
+    </div>
+     <div class="firstname">
+  <label class="finput">
+    <input class="finput__field" type="text" id="address"  />
+        <span class="finput__label">Address</span>
+    </label>
+    </div>
+    <div class="firstname">
+  <label class="finput">
+    
+      <input class="finput__field" type="text" id="pincode"  />
+        <span class="finput__label">Pincode</span>
+    </label>
+    </div>
+     <div class="firstname">
+  <label class="finput">
+    
+      <input class="finput__field" type="text" id="mobileno" />
+        <span class="finput__label">MobileNo.</span>
+    </label>
+    </div>
+  </div>
+  <div class="rightbuy">
+      <h2>Seller Details</h2>
+      <div class="firstname1">
+  <label class="finput">
+    
+      <input class="finput__field" type="text" id="selleremail"  readonly/>
+        <span class="finput__label">SellerEmail</span>
+    </label>
+    </div>
+       <div class="firstname1">
+  <label class="finput">
+    
+      <input class="finput__field" type="text" id="shopname"  readonly/>
+        <span class="finput__label">ShopName</span>
+    </label>
+    </div>
+     <div class="firstname1">
+  <label class="finput">
+    <input class="finput__field" type="text"  id="shopaddress" readonly/>
+        <span class="finput__label">ShopAddress</span>
+    </label>
+    </div>
+     <div class="firstname1">
+  <label class="finput">
+    <input class="finput__field" type="text" id="shopmno" readonly/>
+        <span class="finput__label">ShopMno.</span>
+    </label>
+    </div>
+  </div>
+  <div class="bookcontainerbuy">
+      <div class="imagecontainerbuy">
+          <img src="" id="buyimage"/>
+           <ul>
+           <li><span id="buybookname" class="bookname">Java</span></li>
+           <li style="opacity:0.7;"><span id="buybookauthor" class="authorname">By Ebalagurusamy</span></l1>
+            <li><span id="buybookpub" class="publisher">By Ebalagurusamy</span></l1>
+           <li style="color:green;"><span>In stock</span></li>
+           <li>Price:<span id="buybookprice" style="margin-left:4rem">250</span></h4>
+           <li style="margin-left:8rem"><i style="" class="fa">&#xf00d;</i><span id="item"></span></li>
+           <li>Subtotal<span id="subtotle" style="margin-left:2.2rem;border-top:2px solid #b0a6a6;"></span></li>
+           </ul>
+      </div>
+      <div>
+         
+      </div>
+  </div>
+  </div>
+  <div class="buttondivbuy">
+  <button class="buybuttonbuy" id="placeorderbutton">Place Order</button>
+  </div>
+  </div>
+
+</div>
+
+            <%- include ('footer') %>
+        </body>
+        <script src="cart.js"></script>
+</html>

@@ -1,0 +1,496 @@
+.ordercartdiv{
+    width:100%;
+    padding: 50px 150px 50px 50px;
+     
+    
+}
+
+/* #myBtn{display: none;}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+} */
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#myBtn i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#myBtn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#myBtn:hover i {
+    color: #fff;
+    top: 5px;
+}
+.alert1 {
+    display: none;
+  padding: 25px;
+  /* background-color: #df3023dc; */
+  color: white;
+  /* position: absolute; */
+  position: fixed;
+  top:0;
+  z-index: 1500;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  background: red;
+  
+
+}
+.red{
+    background: red;
+}
+
+
+.green
+{
+    background: green;
+}
+
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.9;
+    z-index: 11;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  position: relative;
+  top:40%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.noitem{
+    /* margin: auto; */
+    font-weight: bold;
+    display: none;
+}
+
+#orderitemsInCart{
+border-top: 2px solid rgb(157, 153, 153);
+width: 800px;
+margin-top: 4rem;
+/* margin: auto; */
+}
+
+.left_container
+{
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+    width:100%;
+    /* padding: 20px 20px 20px 20px; */
+    border-bottom: 2px solid rgb(157, 153, 153);
+   
+    /* margin-bottom: 20px; */
+}
+
+.left_container .datadiv h3{margin: 0rem 1rem 1.2rem 0rem;}
+
+.left_container .datadiv h1 .fa{font-size: 20px;top:0}
+
+#cartbutton
+{
+    width: 100%;
+    height:40px;
+    color:white;
+    font-weight: bold;
+    background: rgb(11, 11, 87);
+}
+
+#cart_container
+{
+    height:80px;
+
+}
+
+.datadiv{
+    padding: 20px;
+    margin-left: -1rem;
+}
+
+.datadiv h3 i{margin-right: 10px;}
+
+ ul li{list-style: none;}
+
+.bookname{
+    color: #007185;
+    font-size: 20px;
+    font-weight: bold;
+}
+.authorname{
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.publisher{
+    font-size: 17px;
+}
+
+.price{
+    font-size: 17px;
+}
+
+.avilable{
+    font-size: 16px;
+}
+
+.stock{
+    font-size: 17px;
+    color: green;
+}
+
+.red1{
+    color: red;
+    font-size: 17px;
+}
+
+.buynow{
+    margin-left: 0px;
+    border: none;
+    outline: 0;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background: red;
+    color: white;
+}
+
+.buynow:hover{margin-left: 0px;
+    border: none;
+    outline: 0;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background: rgb(235, 4, 4);
+    color: white;
+}
+
+.left_container .datadiv ul li .price i{font-size: 13px}
+
+.buttondiv1{margin-left: 0px;margin-top: 2rem;}
+
+.buttondiv1 i{padding: 0px 5px 0px 0px;font-size: 18px;}
+
+ @media screen and (max-width: 991px) {
+.ordercartdiv{
+    width:100%;
+    padding: 50px 50px 50px 50px;
+     
+    
+}
+
+#orderitemsInCart{
+border-top: 2px solid rgb(157, 153, 153);
+width:100%;
+margin: auto;
+}
+
+.left_container
+{
+    display: flex;
+    column-gap: 20px;
+    width:100%;
+    /* padding: 20px 20px 20px 20px; */
+    border-bottom: 2px solid rgb(157, 153, 153);
+   
+    /* margin-bottom: 20px; */
+}
+
+.left_container .datadiv h3{margin: 0rem 1rem 1.2rem 0rem;}
+
+.left_container .datadiv h1 .fa{font-size: 20px;top:0}
+
+#cartbutton
+{
+    width: 100%;
+    height:40px;
+    color:white;
+    font-weight: bold;
+    background: rgb(11, 11, 87);
+}
+#cart_container
+{
+    height:80px;
+
+}
+
+.datadiv{
+    padding: 20px;
+    margin-left: -1rem;
+}
+
+.datadiv h3 i{margin-right: 10px;}
+
+ ul li{list-style: none;}
+
+.bookname{
+    color: #007185;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.authorname{
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.publisher{
+    font-size: 17px;
+}
+
+.price{
+    font-size: 17px;
+}
+
+.avilable{
+    font-size: 16px;
+}
+
+.buynow{margin-left: 10px;
+    border: none;
+    outline: 0;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+     background: red;
+    color: white;
+}
+
+.buynow:hover{margin-left: 10px;
+    border: none;
+    outline: 0;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+     background: rgb(235, 4, 4);
+    color: white;
+}
+
+.left_container .datadiv ul li .price i{font-size: 13px}
+
+.buttondiv1{margin-left: -20px;margin-top: 2rem;}
+
+.buttondiv1 i{padding: 0px 5px 0px 0px;font-size: 18px;}
+
+} 
+@media screen and (max-width: 480px) {
+.ordercartdiv
+{
+    width:100%;
+    padding: 50px 10px 0px 10px;
+     
+    
+}
+
+#orderitemsInCart{
+border-top: 2px solid rgb(157, 153, 153);
+width: 100%;
+margin: auto;
+  margin-bottom: 20px;
+}
+
+.left_container
+{
+    display: flex;
+    /* flex-wrap: wrap; */
+    column-gap: 20px;
+    width:100%;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid rgb(157, 153, 153);
+   
+  
+}
+
+.left_container .datadiv h3{margin: 0rem 1rem 1.2rem 0rem;}
+
+.left_container .datadiv h1 .fa{font-size: 20px;top:0}
+
+#cartbutton
+{
+    width: 100%;
+    height:40px;
+    color:white;
+    font-weight: bold;
+    background: rgb(11, 11, 87);
+}
+
+#cart_container
+{
+    height:80px;
+}
+
+.datadiv{
+    padding: 20px;
+    margin-left: -1.7rem;
+}
+
+.datadiv h3 i{margin-right: 10px;}
+
+ ul li{list-style: none;}
+
+.bookname{
+    color: #007185;
+    font-size: 16px;
+    font-weight: bold;
+}
+.authorname{
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.publisher{
+    font-size: 13px;
+}
+
+.price{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.avilable{
+    font-size: 12px;
+}
+
+.stock{
+    font-size: 12px;
+    color: green;
+}
+.red1{
+    color: red;
+    font-size: 12px;
+}
+
+.buynow{
+    margin-left: 5px;
+    border: none;
+    outline: 0;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background: red;
+    color: white;
+}
+
+.buynow:hover{
+    margin-left: 5px;
+    border: none;
+    outline: 0;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background: rgb(235, 4, 4);
+    color: white;
+}
+
+.left_container .datadiv ul li .price i{font-size: 14px}
+
+.buttondiv1{
+margin-left: 0px;
+margin-top: 1rem;
+display: flex;
+}
+
+.cartheading h1{font-size: 26px;}
+
+.buttondiv1 i{
+    padding: 0px 5px 0px 0px;
+    font-size: 14px;
+}
+
+#myBtn:hover i {
+    color: #fff;
+    top: 13px;
+}
+
+}

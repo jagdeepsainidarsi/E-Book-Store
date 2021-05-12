@@ -1,0 +1,214 @@
+
+<html lang="en">
+
+    <head>
+        <title>e-Book Store | <%= title %></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="header.css" rel="stylesheet" type="text/css"/>
+        <link href="login.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/jpg" href="fav.png"/>
+          <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+      
+    </head>
+        <body>
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+             <% if(login=="register") { %>
+                <div class="alert green" id="alert_msg">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    Successfully register,you can login now!!!!!
+                </div>
+            <% } %>
+            <% if(login=="true") { %>
+            <div class="alert green" id="alert_msg">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                Login Successfully
+            </div>
+            <% } %>
+            <%  if(login=="false") { %>
+            <div class="alert red" id="alert_msg">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Sorry wrong detail entered
+            </div>
+            <% } if(login=="cart_msg") { %>
+                <div class="alert red" id="alert_msg">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Sorry, Please login first
+            </div>
+            <% } if(login=="duplicate") { %>
+                <div class="alert red" id="alert_msg">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Sorry,this email already exists!!!
+            </div>
+            <% } else { } %>
+    
+                
+            <div class="hero"
+                <% if(title=="Home") { %>
+                    id="home_background">
+                <% } %>
+                <% if(title=="Shop") { %>
+                    id="shop_background">
+                <% } %>
+                <% if(title=="Contact Us") { %>
+                    id="contact_background">
+                <% } %>
+                <% if(title=="Cart") { %>
+                    id="cart_background">
+                <% } %>
+    
+                <div id="upperheader">
+                    <labe id="contactus">CONTACT US ON ebookstore@gmail.com</labe>
+                    <a id="logout_button" href="/logout" ><i class="fa fa-power-off" style="color:white"></i> Logout</a>
+                    <a id="no_cart_item" href="/cart" ><span class="glyphicon glyphicon-shopping-cart" style="color:white"></span>Your cart:<labe id="no_cart_items">0</labe></a>
+                    <a onclick="document.getElementById('id01').style.display='block'" id="login" ><i class="fa fa-user-circle-o" style="color:white"></i> Login </a>            
+                    <a onclick="document.getElementById('id02').style.display='block'" id="register" ><i class="fa fa-user-plus" style="color:white"></i> Register</a>      
+                   
+                    <input type="text" placeholder="Search Book"/>
+                </div>       
+            
+              
+           
+    
+    
+                <header class="main-header">
+                    <div class="logo">
+                   
+                    <a href="/" ><img src="log.png" id="logo_img"/></a>
+                    </div>
+                    <input type="checkbox" class="menu-btn" id="menu-btn">
+                    <label for="menu-btn" class="menu-icon">
+                    <span class="menu-icon__line"></span>
+                    </label>
+                
+                    <ul class="nav-links">
+                        <li class="nav-link">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/shop">Shop</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/cart" >Cart</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/contactus">Contact</a>
+                        </li>
+                    </ul>
+                </header>
+            <% if(title=="Home") { %>
+                <h2 class="home_h2">Tooday's deal</h2>
+                <h1 class="home_h1">in Books</h1>
+                <h3 class="home_h3"><a href="/shop">Order now</a></h3>
+                <img src="books.png" id="book_icon" />
+            <% } %>
+            <% if(title=="Shop") { %>
+                <h2 id="shop_heading_animation"><i class="fa">&#xf07a;</i> Shop </h2>
+            <% } %>
+            <% if(title=="Contact Us") { %>
+                <h2 id="shop_heading_animation">Contact Us</h2>
+            <% } %>
+            </div>
+             <div id="id01" class="modal1 animate" >
+        <div class="containerinside" >
+        <div id="upper">
+        <div id="content" >
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="clos" id="clos" data-dismiss="modal">&times;</button>
+                     <div id="signin"><label>SIGN IN</label></div>
+                     </div></div>
+                            <div id="radio_groups">
+                                <input type="radio" name="login_radio" id="user_radio" checked/><label for="user_radio">User</label>
+                                <input type="radio" name="login_radio" id="seller_radio"/><label for="seller_radio">Book Seller</label>
+                            </div>
+                        <div class="modal-bdy" id="user_form">                    
+                            <form action="/loginuser" method="POST">
+                           <div  class="divleft">
+                                <label class="required">UserEmail</label>
+                                <input type="email" placeholder="User Email" id="luserbox" name="user_email" required/>
+                           
+                            </div>
+                          <div class="divright">
+                           <label class="required">Password</label>
+                          <input type="password" placeholder="User Password" id="lpassbox" name="user_pass"  required/>
+                          </div>
+                            <input type="submit" class="loginbutton1" id="login_submit_button" value="Login"/>
+                            </form>
+                     
+                          <div style="height:4em;width:100%"></div>
+                        
+                        </div>
+                        <div class="modal-bdy" id="seller_form">                    
+                            <form action="/loginseller" method="POST">
+                           <div  class="divleft">
+                                <label class="required">SellerEmail</label>
+                                <input type="email" placeholder="Seller Email" id="luserbox" name="user_email" required/>
+                           
+                            </div>
+                          <div class="divright">
+                           <label class="required">Password</label>
+                          <input type="password" placeholder="Seller Password" id="lpassbox" name="user_pass" required />
+                          </div>
+                            <input type="submit" class="loginbutton1" id="login_submit_button" value="Seller Login"/>
+                            </form>
+                     
+                          <div style="height:4em;width:100%"></div>
+                        
+                        </div>
+                        
+                        
+                 </div>
+                </div>
+               
+    <div id="id02" class="modal2 animate">
+      <div class="containerinside1" >
+        <div id="upper1">
+        <div id="content1">
+                           
+                     <button onclick="document.getElementById('id02').style.display='none'" type="button" class="clos" id="clos" data-dismiss="modal">&times;</button>
+                     <div id="signin1"><label>SIGN UP</label></div>
+                     </div></div>
+                        <div class="modal-bdy">
+                        <form action="/adduser" method="POST" >
+                           <div  class="divleft1">
+                                <label class="required">Username</label>
+                                <input type="text" placeholder="Username" id="suserbox" name="user_name" required/>
+                           
+                            </div>
+                          <div class="divleft1">
+                           <label class="required">Password</label>
+                          <input type="password" placeholder="Password" id="spassbox" required name="user_pass" title="Must contain atleast one number,one Uppercase and lowercase letter, and at least 6 character" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+                         
+                          </div>
+                           
+                          <div class="divleft1">
+                           <label class="required">Email</label>
+                          <input type="email" placeholder="Email" id="semailbox" name="user_email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                          </div>
+                          <div class="divleft1">
+                           <label class="required">PhoneNo.</label>
+                          <input type="text" placeholder="PhoneNo" id="snumberbox" name="user_number" required pattern="[0-9]{10}"/>
+                          </div>
+                        <input type="submit" class="loginbutton" id="signup_button" value="Sign Up"></input>
+                          <div style="height:4em;width:100%"></div>
+                      </form>
+                  </div>
+                 </div>
+    </div>
+         
+            
+    
+                </div></div>
+            <script src="header.js"></script>
+            <script src="common.js"></script>
+       
+        </body>
+    </html>
+    

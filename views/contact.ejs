@@ -1,0 +1,80 @@
+<html>
+    <head>
+        
+        <link rel="shortcut icon" type="image/jpg" href="fav.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="contact.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/png" href="fav.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    
+        <% if(login==="alert") { %>
+        <div class="alert green" id="alert_msg">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Feedback saved successfully!!!
+        </div>
+        <% }  %>
+        <%  if(login=="noalert") { %>
+        <div class="alert red" id="alert_msg">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Failed to save feedback!!!
+        </div>
+        <% } %>
+
+        <%- include ('header') %>
+        <div id="get_in_touch" >
+            <div id="container">                
+                <div id="phone_div">
+                    <i class="fa fa-phone" style="font-size:60px;color:green"></i>
+                    <h3>PHONE</h3>
+                    <h4>+91 XXXXXXXXXX</h4>
+                </div>
+                <div id="email_div">
+                    <i class="fa fa-envelope" style="font-size:60px;color:blue"></i>
+                    <h3>EMAIL</h3>
+                    <h4>abc@gmail.com</h4>
+                </div>
+                <div id="address_div">
+                    <i class="fa fa-map-marker" style="font-size:60px;color:yellow"></i>
+                    <h3>ADDRESS</h3>
+                    <h4>123, city XXX</h4>
+                </div>
+            </div>
+        </div>
+        <div id="send_msg_form" >
+            <h1>Send Us A Message / Feedback</h1>
+            <form action="/feedback" method="POST" >
+                <input type="text" placeholder="name *" name="name" required/>
+                <input type="email" placeholder="email *" name="email"  required/><br/>
+                <textarea type="text" placeholder="Message *" name="message"  id="messagebox" required ></textarea><br/>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+        <div id="main_container">
+          <h1>Our Team</h1>
+          <div id="deepak_div">
+              <img src="./deepak.png" />
+              <div>
+                <h2>Deepak</h2>
+                <h3>Master Of Computer Science(MCA)</h3>
+              </div>
+          </div>
+          <div id="jagdeep_div">
+              <img src="./jagdeep.png" />
+              <div>
+                <h2>Jagdeep</h2>
+                <h3>Master of Science(Computer Science)</h3>
+              </div>
+          </div>
+      </div>
+
+        <%- include ('footer') %>
+        <script>
+            setTimeout(function()
+            {
+                alert_msg.style.display="none";
+            },1000);
+        </script>
+    </body>
+</html>

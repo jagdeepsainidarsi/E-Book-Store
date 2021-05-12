@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="orderdetail.css" rel="stylesheet" type="text/css"/>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+     
+     <div class="loading" id="loading"><div class="loader"></div></div>
+    <%- include ('header') %>
+            
+            <div class="ordercartdiv">
+            <a href="/cart" style="font-size:20px;" ><i style="font-size:24px;position:relative;top:1;" class="fa">&#xf137;</i>Back</a>
+            <div class="cartheading">
+            <h1>Your Order Details</h1>
+            </div>
+            <div class="orderitems" id="orderitemsInCart">
+            <div class="noitem" id="noitem">
+            <h1>No Order Details!</h1>
+            </div>
+
+
+            </div>
+            </div>
+             <%- include ('footer') %>
+            </body>
+            <script src="orderdetail.js"></script>
+            </html>

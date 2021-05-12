@@ -1,0 +1,319 @@
+body{
+    background: url("https://cms.bitlab.host/api/data/72/categories/101/background-image.jpg");
+    /* background-size: 100% 100%; */
+
+
+
+  /* background-image: url("https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=891&q=80"); */
+  /* https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80 */
+/* https://image.shutterstock.com/image-vector/grunge-green-book-now-round-260nw-681973900.jpg */
+
+/* https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=891&q=80 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+    margin: 0;
+width: 100%;
+ text-decoration: none;
+padding: 0;
+font-family: "Gill Sans", sans-serif;
+}
+h1{color: white;
+font-weight: bold;}
+.head{
+    /* height: 100%; */
+    /* min-width: 400px; */
+    width: 100%;
+    color: white;
+    background-image: url(http://loremipsum.themerex.net/wp-content/uploads/2016/09/bg-clients.jpg?id=1143) !important;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+    background-size: cover;
+    
+}
+
+#dic1{transition-duration: 2s;}
+.column{padding-left: 15px;
+padding-right: 15px;
+/* padding-top: 30px; */
+}
+.emptyspace{margin: auto;width: 70%;text-align: center;padding: 35px;}
+
+.popular{font-size: 62px;}
+.paragraph{font-size: 20px;}
+
+.paragraph1{width:70%;margin:auto;margin-bottom:2em; font-size: 18px;
+line-height: 30px;padding-left: 15px;padding-right: 15px;padding-top: 10px;}
+.paragraph p{margin-top:1em;
+}
+
+.buttondiv{text-align: center;margin-top: 12em;}
+.buttonlink{color:white;
+background:#0ce682;
+border: 7px solid #0ce682;
+width: 140px;
+ text-decoration: none;
+font-weight: bold;
+padding: 10px;
+font-size: 16px;}
+.buttonlink:hover{
+width: 140px;
+color:#0ce682;
+background: transparent;
+font-weight: bold;
+text-decoration: none;
+padding: 10px;
+font-size: 16px;}
+.emptyspacebottom{height: 8.6em}
+.emptyspacebottom1{height: 3rem;}
+.emptyspacebottom2{height: 5rem;}
+.outside{
+background: lavender;
+width: 100%;
+
+}
+
+
+.inerpart{width: 100%;text-align: center;}
+
+.imagesdiv1{display: flex;
+flex-wrap: wrap;
+
+width: 68%;
+
+margin: auto;
+justify-content: space-between; 
+}
+.fa_custom{color: #0ce682;}
+.imagesdiv1 div h6{opacity: 0.8;font-weight: none;margin-top: 1.5em;}
+
+.imagesdiv1 div i:hover{
+  -ms-transform: translate(0px,5px);
+  transform: translate(0px,5px); 
+  
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);}
+
+
+.slider {
+
+  overflow: hidden;
+
+ 
+}
+
+.swiper-slide {
+  width: 50%;
+   margin: auto;
+
+   height: 200px;
+
+}
+
+.slider__item {
+  font-size: 24px;
+
+  text-align: center;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
+  
+}
+#s1,#s2,#s3,#s4,#s5{margin: 0;}
+
+.section{width:100%;text-align: center;
+background: transparent;
+/* background-color: #000000; */
+/* background: transparent; */
+color: #f26c0b;
+}
+.section2{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: auto;
+    column-gap: 105px;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 20px;
+    font-weight: bold;
+    }
+/* .section2 div h1{}; */
+.section2 div{text-align: start;width: 350px;}
+.section2 .div1,
+.section2 .section2div2{border-right: 2px solid chocolate;}
+
+@media(min-width:460px) and (max-width:991px){
+.head{
+
+    width: 100%;
+    color: white;
+    background-image: url(http://loremipsum.themerex.net/wp-content/uploads/2016/09/bg-clients.jpg?id=1143) !important;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+    background-size: cover;
+    
+}
+/* #dic1{transition-duration: 2s;} */
+.column{padding-left: 10px;
+padding-right: 10px;}
+.emptyspace{margin: auto;width: 90%;text-align: center;padding: 5px;}
+
+.popular{font-size: 44px;}
+
+
+.paragraph1{width:90%;margin:auto;margin-bottom:2em; font-size: 18px;
+line-height: 20px;padding-left: 5px;padding-right: 5px;}
+.paragraph1 .hd{margin-top:1em;opacity:0.9;font-size: 12px;}
+
+
+.buttondiv{text-align: center;margin-top: 8em;}
+.buttonlink{color:white;
+background:#0ce682;
+border: 7px solid #0ce682;
+width: 140px;
+ text-decoration: none;
+font-weight: bold;
+padding: 10px;
+font-size: 16px;}
+.buttonlink:hover{
+width: 140px;
+color:#0ce682;
+background: transparent;
+text-decoration: none;
+font-weight: bold;
+padding: 10px;
+font-size: 16px;}
+.emptyspacebottom{height: 4.6em}
+
+.emptyspacebottom2{height: 4.6em}
+.slider {
+    /* width: 75%; */
+    /* height: 100px; */
+  overflow: hidden;
+ 
+}
+
+.swiper-slide {
+  /* width: 50%; */
+   margin: auto;
+   /* margin-left: 50px; */
+  /* margin-right: 50px; */
+   /* transition-duration: 0ms; */
+   height: 100px;
+  /* margin-right: 20px; */
+}
+
+.slider__item {
+  font-size: 24px;
+  
+  /* padding: 12px 32px; */
+  /* transition-duration: 0ms; */
+  text-align: center;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
+  
+}
+.imagesdiv1{width: 100%;}
+.imagesdiv1{justify-content: center;row-gap: 20px;column-gap: 50px;}
+.imagesdiv1 div{width: 150px;}
+.imagesdiv1 div h6{opacity: 0.8;font-weight: none;font-size: 12px;margin-top: 0.5em;}
+/* #s1{margin-right: 60px;}
+#s2{margin-right: 80px;}
+#s3{margin-right: 60px;}
+#s4{margin-right: 60px;}
+#s5{margin-right: 60px;} */
+.section2 div{margin-top: 2em;}
+.section2 .div1,
+.section2 .section2div2,
+.section2 .div2{border-right: 2px solid chocolate;}
+}
+@media(max-width:459px){
+.head{
+    /* height: 100%; */
+    /* min-width: 400px; */
+    width: 100%;
+    color: white;
+    background-image: url(http://loremipsum.themerex.net/wp-content/uploads/2016/09/bg-clients.jpg?id=1143) !important;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+    background-size: cover;
+    
+}
+/* #dic1{transition-duration: 2s;} */
+.column{padding-left: 0px;
+padding-right: 0px;}
+.emptyspace{margin: auto;width: 90%;text-align: center;padding: 5px;}
+
+.popular{font-size: 30px;}
+
+.paragraph{font-size: 14px;
+line-height: 20px;padding-left: 5px;padding-right: 5px;}
+
+
+.buttondiv{text-align: center;margin-top: 10em;}
+.buttonlink{color:white;
+background:#0ce682;
+border: 7px solid #0ce682;
+width: 140px;
+ text-decoration: none;
+font-weight: bold;
+padding: 10px;
+font-size: 16px;}
+.buttonlink:hover{
+width: 140px;
+color:#0ce682;
+background: transparent;
+text-decoration: none;
+font-weight: bold;
+padding: 10px;
+font-size: 16px;}
+.emptyspacebottom{height: 5.6em}
+
+.emptyspacebottom2{height: 5.6em}
+.slider {
+    /* width: 75%; */
+    /* height: 100px; */
+  overflow: hidden;
+ 
+}
+
+.swiper-slide {
+  /* width: 50%; */
+   margin: auto;
+   /* transition-duration: 0ms; */
+   height: 100px;
+  /* margin-right: 20px; */
+}
+
+.slider__item {
+  font-size: 24px;
+  text-align: center;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
+  
+}
+.paragraph1{width:90%;margin:auto;margin-bottom:2em; font-size: 18px;
+line-height: 23px;padding-left: 15px;padding-right: 15px;}
+.paragraph1 .hd{margin-top:1em;opacity:0.7;font-size: 14px;}
+.imagesdiv1{justify-content: center;row-gap: 30px;}
+.imagesdiv1 div{width: 200px;}
+.imagesdiv1 div h6{opacity: 0.8;font-weight: none;font-size: 12px;margin-top: 1em;}
+/* #s1{margin-right: 60px;}
+#s2{margin-right: 80px;}
+#s3{margin-right: 60px;}
+#s4{margin-right: 60px;}
+#s5{margin-right: 80px;} */
+.section2 div{margin-top: 2em;}
+.section2 .div1,
+.section2 .section2div2,
+.section2 .div2{border-right: 2px solid chocolate;}
+}
+

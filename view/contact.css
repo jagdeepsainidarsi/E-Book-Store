@@ -1,0 +1,206 @@
+#get_in_touch
+{
+    width: 100%;
+    font-family: emoji;
+    font-weight: bold;
+}
+.alert {
+    /* display: none; */
+  padding: 10px;
+  /* background-color: #df3023dc; */
+  color: white;
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  
+
+}
+.alert1 {
+    display: none;
+  padding: 10px;
+  /* background-color: #df3023dc; */
+  color: white;
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  background: red;
+  
+
+}
+.red{
+    background: red;
+}
+.green
+{
+    background: green;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size:  22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+#container
+{
+    display: flex;
+    column-gap: 100px;
+    row-gap: 50px;
+    padding: 5% 0%;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#phone_div
+{
+    /* width:25%; */
+    border:15px solid rgb(77, 235, 77);
+    padding: 9% 3%;
+    text-align: center;
+}
+#email_div
+{
+    /* width:25%; */
+    border:15px solid rgb(100, 100, 231);
+    padding: 9% 5%;
+    text-align: center;
+}
+#address_div
+{
+    /* width:25%; */
+    border:15px solid yellow;
+    padding: 9% 5%;
+    text-align: center;
+}
+#send_msg_form
+{
+    /* background: url("f.png"); */
+    background-size:cover;
+    color: black;
+    border: 2px solid rgb(211, 77, 36);
+    border-radius: 10px;
+    width:80%;
+    /* background:rgb(211, 77, 36); */
+    text-align: center;  
+    padding: 3% 0%;  
+    margin-left:auto;
+    margin-right: auto;
+}
+#send_msg_form h1
+{
+    /* display: none; */
+    font-size: 220%;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 5%;
+    color: black;
+}
+#send_msg_form input[type="text"],#send_msg_form input[type="email"]
+{
+    height: 30px;
+    width:30%;
+    border-radius: 5px;
+    border: 2px solid rgb(211, 77, 36) ;
+    padding: 2%;
+    margin:1%;
+
+}
+#messagebox
+{
+
+    border: 2px solid rgb(211, 77, 36) ;
+    height: 150px;
+    resize:  none;
+    width:62%;
+    border-radius: 5px;
+    padding: 2%;
+}
+#send_msg_form input[type="submit"]
+{
+    height:50px;
+    width: 200px;
+    border:0;
+    border-radius: 5px;
+    margin: 1%;
+    /* padding: 2%; */
+    font-size: 18px;
+    background: rgb(104, 187, 214);
+    color: white;
+    font-weight: bold;
+}
+
+
+#main_container
+{
+    font-weight: bold;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+#main_container h1
+{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-color: rgb(211, 76, 36);
+}
+#main_container img
+{
+    height: 150px;
+    width:150px;
+    border-radius: 80px;
+    border: 3px  solid rgb(211, 76, 36);
+}
+#deepak_div
+{
+    /* background: rgb(211, 76, 36); */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    border-top: 2px solid rgb(211, 76, 36);
+    border-bottom: 2px solid rgb(211, 76, 36);
+    margin: 2% 20%;
+    padding: 1%;
+    font-weight: bold;
+}
+#deepak_div h2,#deepak_div h3
+{
+    /* width: 100%; */
+}
+#jagdeep_div
+{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    border-top: 2px solid rgb(211, 76, 36);
+    border-bottom: 2px solid rgb(211, 76, 36);
+    margin: 2% 20%;
+    padding: 1%;
+    font-weight: bold;
+}
+#jagdeep_div h2,#jagdeep_div h3
+{
+    /* width: 100%; */
+}

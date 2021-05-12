@@ -1,0 +1,491 @@
+const header = document.querySelector('.main-header');
+window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+    if (scrollPos > 10 ) {
+        header.classList.add('scrolled');
+    }
+    else {
+        header.classList.remove('scrolled');
+    }
+});
+
+setTimeout(function()
+{
+    alert_msg.style.display="none";
+},2000);
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd+ '/' + mm + '/' + yyyy;
+
+
+var modal = document.getElementById("myModal1");
+var head = document.getElementById("modalHead");
+var desc = document.getElementById("desc");
+var span = document.getElementsByClassName("close")[0];
+var status_submit_button=document.getElementById("status_submit_button");
+span.onclick = function () 
+    {
+        modal.style.display = "none";
+    }
+window.onclick = function (event) 
+{
+    if (event.target == modal) 
+    {
+        modal.style.display = "none";
+    }
+}
+
+var seller;
+var no_cart_item=document.getElementById("no_cart_item");
+var all_product_table=document.getElementById("all_product_table");
+var order_table=document.getElementById("order_table");
+
+var edit_book_model=document.getElementById("myModal");
+var model_book_id=document.getElementById("book_id");
+var model_book_name=document.getElementById("book_name");
+var model_book_pub=document.getElementById("book_pub");
+var model_book_aut=document.getElementById("book_aut");
+var model_book_price=document.getElementById("book_price");
+var update_book_button=document.getElementById("update_book_button");
+
+function is_seller_login()
+{
+    var req=new XMLHttpRequest();
+    req.open("get","/logged")
+    req.send()
+    req.addEventListener("load",function()
+    {
+        var res=JSON.parse(req.responseText);
+        console.log(res)
+        if(res.is_login==true)
+        {
+            seller=res.user;
+            console.log(seller.seller_email,res.user.seller_email);
+            document.getElementById("s_id").innerHTML=seller.seller_email
+            document.getElementById("s_name").innerHTML=seller.seller_name;
+            document.getElementById("shop_name").innerHTML=seller.shop_name;
+            document.getElementById("comm").innerHTML=seller.seller_comision;
+            document.getElementById("s_ph").innerHTML=seller.seller_number;
+            document.getElementById("shop_add").innerHTML=seller.shop_address;
+
+            document.getElementById("seller_update_form_id").value=seller.seller_email;
+            document.getElementById("seller_update_form_name").value=seller.seller_name;
+            document.getElementById("seller_update_form_shopname").value=seller.shop_name;
+            document.getElementById("seller_update_form_comm").value=seller.seller_comision;
+            document.getElementById("seller_update_form_phone").value=seller.seller_number;
+            document.getElementById("seller_update_form_pass").value=seller.seller_pass;
+            document.getElementById("seller_update_form_add").value=seller.shop_address;
+            function product_table()
+            {
+                all_product_table.innerHTML="";
+                
+                var req=new XMLHttpRequest();
+                req.open("get","/product");
+                req.send();
+                req.addEventListener("load",function()
+                {
+                    var book_data=JSON.parse(req.responseText);
+                    // console.log(book_data,book_data===false)
+                    if(book_data===false)
+                    {
+                        var tr=document.createElement("tr");
+                        tr.innerHTML="No book Found";
+                        all_product_table.appendChild(tr);
+                    }
+                    else
+                    {
+
+                        no_cart_item.innerHTML="Your Product:"+book_data.length;
+                        var book_id_th=document.createElement("th")
+                        book_id_th.innerHTML="Book Id"
+                        all_product_table.appendChild(book_id_th)
+
+                        var book_name_th=document.createElement("th")
+                        book_name_th.innerHTML="Book Name"
+                        all_product_table.appendChild(book_name_th)
+
+                        var book_aut_th=document.createElement("th")
+                        book_aut_th.innerHTML="Book Author"
+                        all_product_table.appendChild(book_aut_th)
+
+                        var book_pub_th=document.createElement("th")
+                        book_pub_th.innerHTML="Book Publisher"
+                        all_product_table.appendChild(book_pub_th)
+
+                        var book_price_th=document.createElement("th")
+                        book_price_th.innerHTML="Book Price"
+                        all_product_table.appendChild(book_price_th)
+
+                        var book_edit_th=document.createElement("th")
+                        book_edit_th.innerHTML="Edit"
+                        all_product_table.appendChild(book_edit_th)
+
+                        var book_delete_th=document.createElement("th")
+                        book_delete_th.innerHTML="Delete"
+                        all_product_table.appendChild(book_delete_th)
+
+                        for(var i=0;i<book_data.length;i++)
+                        {
+                            var tr=document.createElement("tr");
+
+                            var book_id=document.createElement("td");
+                            book_id.innerHTML=book_data[i].book_id
+                            tr.appendChild(book_id);
+
+                            var book_name=document.createElement("td");
+                            book_name.innerHTML=book_data[i].book_name;
+                            tr.appendChild(book_name);
+
+                            var book_aut=document.createElement("td");
+                            book_aut.innerHTML=book_data[i].book_aut;
+                            tr.appendChild(book_aut);
+
+                            var book_pub=document.createElement("td");
+                            book_pub.innerHTML=book_data[i].book_pub;
+                            tr.appendChild(book_pub);
+
+                            var book_price=document.createElement("td");
+                            book_price.innerHTML=book_data[i].book_price;
+                            tr.appendChild(book_price);
+
+                            var all_product_table_edit_button=document.createElement("button");
+                            all_product_table_edit_button.innerHTML="Edit";
+                            all_product_table_edit_button.className="edit_button";
+                            all_product_table_edit_button.id=book_data[i].book_id;  
+                            var book_edit_button=document.createElement("td");
+                            book_edit_button.appendChild(all_product_table_edit_button);          
+                            tr.appendChild(book_edit_button);
+
+                            var all_product_table_delete_button=document.createElement("button");
+                            all_product_table_delete_button.innerHTML="Delete";
+                            all_product_table_delete_button.className="delete_button";
+                            all_product_table_delete_button.id=book_data[i].book_id;
+                            var book_delete_button=document.createElement("td");
+                            book_delete_button.appendChild(all_product_table_delete_button);
+                            tr.appendChild(book_delete_button);
+
+                            all_product_table.appendChild(tr);
+                            all_product_table_edit_button.addEventListener("click",function()
+                            {
+                                edit_book_model.style.display="block";
+                                for(let j=0;j<book_data.length;j++)
+                                {
+                                    if(book_data[j].book_id==this.id)
+                                    {
+                                        model_book_id.value=book_data[j].book_id;
+                                        model_book_name.value=book_data[j].book_name;
+                                        model_book_aut.value=book_data[j].book_aut;
+                                        model_book_pub.value=book_data[j].book_pub;
+                                        model_book_price.value=book_data[j].book_price;
+
+                                        update_book_button.addEventListener("click",function()
+                                        {
+                                            var rq=new XMLHttpRequest();
+                                            rq.open("post","/updatebook");
+                                            var o={
+                                                book_id:model_book_id.value,
+                                                book_name:model_book_name.value,
+                                                book_pub:model_book_pub.value,
+                                                book_aut:model_book_aut.value,              
+                                                book_price:model_book_price.value
+                                            }
+                                            rq.send(JSON.stringify(o));
+                                            rq.addEventListener("load",function()
+                                            {
+                                                var rs=rq.responseText;
+                                                if(rs)
+                                                {
+                                                    edit_book_model.style.display="none";
+                                                    alert("Book Detail Updated Succesfully");
+                                                    location.reload();
+                                                    // location.href="//*[@id='nav_allproduct_button']";
+                                                }
+                                                
+                                                else
+                                                {
+                                                    alert("Enable to update book detail!!")
+                                                }
+                                            })
+                                        })     
+                                                                          
+                                    }
+                                }
+                            })
+                            all_product_table_delete_button.addEventListener("click",function()
+                            {
+                                var sure=confirm("Are you sure");
+                                if(sure)
+                                {
+                                    var r=new XMLHttpRequest();
+                                    r.open("post","/booksdelete");
+                                    r.send(JSON.stringify({id:this.id}));
+                                    r.addEventListener("load",function()
+                                    {
+                                        if(r.responseText)
+                                        {
+                                            alert("Book Delete Succesfully");
+                                            location.reload();
+                                            // location.href="//*[@id='nav_allproduct_button']"                           
+                                        }
+                                    })
+                                }
+                            })
+                        }
+                    }
+                });
+            }//end of product_table function().
+            product_table();
+            
+            function order_table_function(view)
+            {
+                order_table.innerHTML="";
+                var req1=new XMLHttpRequest();
+                req1.open("get","/order")
+                req1.send()
+                req1.addEventListener("load",function()
+                {
+                    var order_data=JSON.parse(req1.responseText);
+                    if(order_data===false)
+                    {
+                        let tr=document.createElement("tr");
+                        tr.innerHTML="No Record Found";
+                        order_table.appendChild(tr);
+                    }
+                    else
+                    {
+                        var order_id_th=document.createElement("th")
+                        order_id_th.innerHTML="Order Id"
+                        order_table.appendChild(order_id_th)
+
+                        var book_id_th1=document.createElement("th")
+                        book_id_th1.innerHTML="Book Id"
+                        order_table.appendChild(book_id_th1)
+
+                        var user_id_th=document.createElement("th")
+                        user_id_th.innerHTML="User Id"
+                        order_table.appendChild(user_id_th)
+
+                        var user_address_th=document.createElement("th")
+                        user_address_th.innerHTML="User Address"
+                        order_table.appendChild(user_address_th)
+
+                        var user_phone_th=document.createElement("th")
+                        user_phone_th.innerHTML="User Phone"
+                        order_table.appendChild(user_phone_th)
+
+                        var date_th=document.createElement("th")
+                        date_th.innerHTML="Date Of Order"
+                        order_table.appendChild(date_th)
+
+                        var status_th=document.createElement("th")
+                        status_th.innerHTML="Status"
+                        order_table.appendChild(status_th)
+
+                        var order_edit_status_th=document.createElement("th")
+                        order_edit_status_th.innerHTML="Delete"
+                        order_table.appendChild(order_edit_status_th)
+                        for(let i=0;i<order_data.length;i++)
+                        {
+                            var order_status_var=order_data[i].status;
+                            if(order_data[i].status.length>13)
+                            {
+                                var index=order_data[i].status.indexOf("-");
+                                order_status_var=order_data[i].status.substring(0,index);
+                                console.log(view,"285",index)
+                            }
+                            if(order_status_var==view || view=="All")
+                            {
+                            let tr=document.createElement("tr");
+
+                            let order_id=document.createElement("td");
+                            order_id.innerHTML=order_data[i].order_id;
+                            tr.appendChild(order_id);
+
+                            let book_id=document.createElement("td");
+                            book_id.innerHTML=order_data[i].book_id;
+                            tr.appendChild(book_id);
+
+                            let user_id=document.createElement("td");
+                            user_id.innerHTML=order_data[i].user_id;
+                            tr.appendChild(user_id);
+
+                            let user_address=document.createElement("td");
+                            user_address.innerHTML=order_data[i].user_address;
+                            tr.appendChild(user_address);
+
+                            let user_phone=document.createElement("td");
+                            user_phone.innerHTML=order_data[i].user_phone;
+                            tr.appendChild(user_phone);
+
+                            let order_date=document.createElement("td");
+                            order_date.innerHTML=order_data[i].new_date;
+                            tr.appendChild(order_date);
+
+                            let status=document.createElement("td");
+                            status.innerHTML=order_data[i].status
+                            tr.appendChild(status);
+
+                            let order_edit_status=document.createElement("button");
+                            order_edit_status.className="edit_status_button";
+                            order_edit_status.id=order_data[i].order_id;
+                            order_edit_status.innerHTML="Edit Status"
+                            order_edit_status.id=order_data[i].order_id;
+                            tr.appendChild(order_edit_status);
+
+                            order_table.appendChild(tr);
+                            order_edit_status.addEventListener("click",function()
+                            {      
+                                // alert(order_data[i].status.indexOf("Delivered"));
+                                if(order_data[i].status=="Cancel")
+                                {
+                                    alert("You can't edit beacause order is cancel by user");
+                                }
+                                else if(order_data[i].status.indexOf("Delivered")>=0)
+                                {
+                                    alert("You can't edit beacause order is delivered to user");
+                                }
+                                else
+                                {                                
+                                    modal.style.display="block";
+                                    var order_status;
+                                    var status_dropdown=document.getElementById("status_dropdown");
+                                    status_submit_button.addEventListener("click",function()
+                                    {
+                                        var result = status_dropdown.options[status_dropdown.selectedIndex].value;
+                                        result=result+"-"+today;              
+                                        var request=new XMLHttpRequest();
+                                        request.open("post","/orderstatus");
+                                        request.send(JSON.stringify({order_id:order_data[i].order_id,status:result}));
+                                        request.addEventListener("load",function()
+                                        {
+                                            if(request.responseText)
+                                            {
+                                                alert("Status Updated");
+                                                location.reload();
+                                                // location.href="//*[@id='nav_order_button']"
+                                            }
+                                            else
+                                            {
+                                                alert("Failed to update");
+                                            }
+                                        })
+                                    })
+                                }
+                            })
+                            }
+                        }
+                    }
+                    
+                })
+            }//end of order_table function
+            var order_filter=document.getElementById("order_filter");
+            order_table_function("All")
+            order_filter.addEventListener("change",function()
+            {
+                var result = order_filter.options[order_filter.selectedIndex].value;
+                // alert(result)
+                order_table_function(result);
+            })
+        }
+    });
+}
+is_seller_login();
+
+
+var nav_addproduct_button=document.getElementById("nav_addproduct_button");
+var nav_allproduct_button=document.getElementById("nav_allproduct_button");
+var profile_container=document.getElementById("profile_container");
+var all_product_container=document.getElementById("all_product_container");
+var  add_product_container=document.getElementById("add_product_container");
+var order_container=document.getElementById("order_container");
+var nav_profile_button=document.getElementById("nav_profile_button");
+
+var chechbox=document.getElementById("menu-btn");
+
+nav_profile_button.addEventListener("click",function()
+{
+    profile_container.style.display="block";
+    all_product_container.style.display="none";
+    order_container.style.display="none";
+    add_product_container.style.display="none";
+    chechbox.checked = false;
+});
+
+var nav_order_button=document.getElementById("nav_order_button");
+nav_order_button.addEventListener("click",function()
+{
+    // order_table();
+    profile_container.style.display="none";
+    all_product_container.style.display="none";
+    order_container.style.display="block";
+    add_product_container.style.display="none";
+    chechbox.checked = false;
+});
+nav_addproduct_button.addEventListener("click",function()
+{
+    profile_container.style.display="none";
+    all_product_container.style.display="none";
+    order_container.style.display="none";
+    add_product_container.style.display="block";
+    chechbox.checked = false;
+});
+nav_allproduct_button.addEventListener("click",function()
+{
+    // product_table();
+    profile_container.style.display="none";
+    all_product_container.style.display="block";
+    order_container.style.display="none";
+    add_product_container.style.display="none";
+    chechbox.checked = false;
+});
+container=document.getElementById("container");
+profile_heading=document.getElementById("profile_heading");
+profile_date=document.getElementById("profile_data");
+profile_form=document.getElementById("profile_form");
+edit_profile_button=document.getElementById("edit_profile_button");
+update_profile_button=document.getElementById("update_profile_button");
+backto_profile_button=document.getElementById("backto_profile_button");
+edit_profile_button.addEventListener("click",function()
+{
+    profile_form.style.display="block";
+    profile_date.style.display="none";
+    profile_heading.innerHTML="Edit Profile";
+})
+backto_profile_button.addEventListener("click",function()
+{
+    profile_form.style.display="none";
+    profile_date.style.display="block";
+    profile_heading.innerHTML="Profile";
+})
+update_profile_button.addEventListener("click",function()
+{
+    var req=new XMLHttpRequest();
+    req.open("post","/updateaddseller")
+    var obj={
+        seller_email:document.getElementById("seller_update_form_id").value,
+        seller_name:document.getElementById("seller_update_form_name").value,
+        shop_name:document.getElementById("seller_update_form_shopname").value,
+        seller_address:document.getElementById("seller_update_form_add").value,
+        seller_comision:document.getElementById("seller_update_form_comm").value,
+        seller_number:document.getElementById("seller_update_form_phone").value,
+        seller_pass:document.getElementById("seller_update_form_pass").value
+    }
+    console.log(obj);
+    req.send(JSON.stringify(obj));
+    req.addEventListener("load",function()
+    {
+        if(req.responseText)
+        {
+            alert("Seller Detail Updated!!!!");
+            location.reload();
+        }
+        else
+        {
+            alert("Sorry,Seller Detail not Updated!!!");
+        }
+    })
+})

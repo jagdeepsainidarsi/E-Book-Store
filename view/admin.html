@@ -1,0 +1,470 @@
+<html>
+    <head>
+        <title>Admin panel</title>
+        <link rel="stylesheet" type="text/css" href="admincss.css"/>
+        <!-- <link rel="stylesheet" type="text/css" href="dpk.css"/>
+          <link rel="stylesheet" type="text/css" href="addseller.css"/> -->
+  <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
+  <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
+  <link href='https://css.gg/shopping-bag.css' rel='stylesheet' type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+  <link href='https://css.gg/bell.css' rel='stylesheet' type="text/css">
+  <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" type="text/css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
+ <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.3/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+    <body>
+         <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+         <div class="loading" id="loading"><div class="loader"></div></div>
+         <div class="alert1" id="alert_msg1">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> aa
+        </div>
+    <div class="main">
+<nav class="navbar1">
+        <div class="logoc">
+            <img id="logo" src="./logo.png" />
+        </div>
+<div class="navbarMenu" style="padding: 0px 24px;">
+<ul class="navbar-nav navbar-nav-right" style="flex-direction:row;margin-top:17px;float:right;">
+                
+    <li class="nav-item">
+         <a class="nav-link"style="display:flex;margin:0px 25px;padding:8px 0px;" href="#" id="navbardrop" data-toggle="dropdown">
+         
+<i class="gg-bell"></i>
+       </a>
+    </li>
+    <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle"style="display:flex;margin:0px 25px;padding:8px 0px;" href="#" id="navbardrop" data-toggle="dropdown">
+          <div><img class="img1" src="./jagdeep.png"/><span class="availability-status online"></span></div>
+          <div class="nav-profile-text" style="margin-left:1rem;">
+                  <p class="mb-1 text-black">Jagdeep</p>
+           </div>
+     </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" style="border-bottom: 2px solid rgb(243, 237, 237);" href="#"><i class="fa fa-refresh" style="margin-right:10px;"></i>Profile</a>
+        <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out"  style="margin-right:10px;"></i>Sign out</a>
+      </div>
+    </li>
+</ul>
+</div>
+</nav>
+    <div id="main_container">   
+        <div class="sidebar" style="">
+            <ul class="ulnav" >
+                    <li class="nav-item act">
+                    <a class="nav-link" href="#">
+                        <div>
+                            <img class="img2" src="./jagdeep.png"/>
+                            <!-- <i class="glyphicon glyphicon-user"></i> -->
+                            </div>
+                        <div class="upperli">
+                        <span class="font-weight-bold mb-2">Jagdeep</span></br>
+                        <span class="text-secondary text-small" style="font-size:13px;">Admin</span>
+                        </div>
+                        <i class="fa fa-bookmark" style="margin-left:auto;color: #1bcfb4 !important;font-size:1rem"></i>
+                        <!-- <i class="glyphicon glyphicon-user" style="margin-left:auto;"></i> -->
+                    </a>
+                    </li>
+                     <li class="nav-item act">
+                    <a class="nav-link" href="#">
+                        <div>
+                            <img class="img2" src="./deepak.png"/>
+                            <!-- <i class="glyphicon glyphicon-user"></i> -->
+                            </div>
+                        <div class="upperli">
+                        <span class="font-weight-bold mb-2">Deepak</span></br>
+                        <span class="text-secondary text-small" style="font-size:13px;">Admin</span>
+                        </div>
+                        <i class="fa fa-bookmark" style="margin-left:auto;color: #1bcfb4 !important;font-size:1rem"></i>
+                        <!-- <i class="glyphicon glyphicon-user" style="margin-left:auto;"></i> -->
+                    </a>
+                    </li>
+                <li class="nav-item act lihover" id="dashboard_menu">
+                    <a class="nav-link" href="#">
+                        <span class="menu-title" >Dashboard</span>
+                    <i class="fa fa-home w3-large" style="margin-left:auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item act lihover" id="seller_menu">
+                    <a class="nav-link" href="#">
+                        <span class="menu-title" >Book Seller</span>
+                    <i class="glyphicon glyphicon-user"style="margin-left:auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item act lihover" id="book_menu">
+                    <a class="nav-link" href="#">
+                        <span class="menu-title" >Books</span>
+                    <i style="font-size:19px;margin-left:auto" class="fa">&#xf02d;</i>
+
+                    </a>
+                    </li>
+                    <li class="nav-item act lihover" id="user_menu">
+                    <a class="nav-link" href="#">
+                        <span class="menu-title" >User</span>
+                        <i style="font-size:18px;margin-left:auto" class="fa">&#xf234;</i> 
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item act lihover" id="add_bookseller_menu">
+                    <a class="nav-link" href="#" >
+                        <span class="menu-title" >Add Book Seller</span>
+                        <i style="font-size:18px;margin-left:auto" class="fa">&#xf055;</i>
+                    </a>
+                    </li> -->
+                    <li class="nav-item act lihover"id="order_menu">
+                    <a class="nav-link" href="#">
+                        <span class="menu-title" >Orders</span>
+                    <i class="gg-shopping-bag" style="font-size:10px;margin-left:auto;"></i>
+                    </a>
+                    </li>
+                    <li class="nav-item act lihover"id="profit_menu">
+                    <a class="nav-link" href="#">
+                        <span class="menu-title" >Profit</span>
+                    <i class="fa fa-refresh w3-spin" style="color:rgb(60,60, 60);font-size:22px;margin-left:auto;"></i>
+                    </a>
+                    </li>
+                <li class="nav-item act">
+                    <div class="border-bottom"style="padding:10px 0px 10px 0px;"><h5><b>Quick Access</b></h5></div>
+                    <a class="nav-link" id="nav-link1" href="#">
+                        
+                    <button class="project" id="add_bookseller_menu">+Add Book Seller</button>
+                    
+
+                    </a>
+                    </li>
+            </ul>        
+        </div>        
+        <div id="container">
+            <div id="dashboard_content">
+                <div id="dashboard_home_content">
+                    <h2><i class="fa fa-home"></i>Dashboard</h2>
+                    <div id="flex_box">
+                        <div id="visits_count_box">
+                            <h1 id="visits_count_box_h1">0</h1>
+                            <h2>Visitors</h2>
+                        </div>
+                        <div id="books_count_box">
+                            <h1 id="books_count_box_h1">0</h1>
+                            <h2>Books</h2>
+                        </div>
+                        <div id="users_count_box">
+                            <h1 id="users_count_box_h1">0</h1>
+                            <h2>Users</h2>
+                        </div>
+                        <div id="sellers_count_box">
+                            <h1 id="sellers_count_box_h1">0</h1>
+                            <h2>Sellers</h2>
+                        </div>                
+                    </div><!-- end of flex_boxes -->
+                    <h2><i class="fa fa-comments-o" style="font-size:36px;color:red"></i>User Feedback</h2>
+                    <div id="feedback_container">
+                        
+                       <table id="feedbackTable">
+    <!-- <tr> -->
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Message</th>
+        
+    <!-- </tr> -->
+    </table>
+                    </div>    <!-- end of feedback_container -->
+                </div> <!--end of dashboard_home_content-->
+                <div id="bookseller_section" >
+                    <div id="bookseller_section_nav">
+                        <h2><i class="fa fa-book" style="font-size:36px;color:white"></i>Book Seller</h2>
+                        
+                        <!-- <h4><i class="fa fa-plus-circle" style="font-size:24px;color:white"></i>Add Book Seller</h4> -->
+                        <input type="text" placeholder="Search Seller" id="seller_search_box" onkeyup="mySearchFunction()"/>
+                    </div>
+                    <div id="seller_table">
+                        <table id="myTable">
+    <!-- <tr> -->
+        <th>SellerName</th>
+        <th>SellerMail</th>
+        <th>ShopName</th>
+        <th>ShopAddress</th>
+        <th>Comision</th>
+        <th>PhoneNo.</th>
+        <th>Password</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    <!-- </tr> -->
+    </table>
+                    </div>
+                </div><!-- End of bookseller section-->
+                <div id="user_section" >
+                    <div id="user_section_nav">
+                        <h2><i class="fa fa-user" style="font-size:36px;color:white"></i>User</h2>                 
+                        <!-- <h4><i class="fa fa-plus-circle" style="font-size:24px;color:white"></i>Add User</h4> -->
+                        <input type="text" placeholder="Search User" id="user_search_box" />
+                    </div>
+                    <div id="user_table">
+                        <table id="usertabledata">
+                            <th>User Email</th>
+                            <th>User Name</th>
+                            <th>User Number</th>
+                            <th>User Address</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        
+                            <tr>
+                                <td>deepaksainidarsi@gmail.com</td>
+                                <td>Deepak</td>
+                                <td>9876543210</td>
+                                <td>KKR</td>
+                                <td><button class="user_table_edit_button">Edit</button></td>
+                                <td><button class="user_table_delete_button">Delete</button></td>                  
+                            </tr>
+                        </table>
+                    </div>
+                </div>   <!-- End of User section-->
+                <div id="order_section">
+                    <div id="order_section_nav">
+                        <h2><i class="fa fa-refresh" style="color:white"></i>Order</h2>                 
+                    </div>
+                    <div id="order_table">
+                        <table id="ordertabledata">
+                            <th>Order Id</th>
+                            <th>Book Id</th>
+                            <th>User Id</th>
+                            <th>Book Seller Id</th>
+                            <th>Status</th>  
+
+                            <tr>
+                                <td>deepaksainidarsi@gmail.com</td>
+                                <td>1</td>
+                                <td>Deepak</td>
+                                <td>9876543210</td>
+                                <td>Done</td>                                        
+                            </tr>
+                        </table>
+                    </div>
+                </div><!-- End of order -->
+                 <div id="book_section">
+                    <div id="book_section_nav">
+                        <h2><i class="fa fa-refresh" style="color:white"></i>Books</h2>                 
+                    </div>
+                    <div id="book_table">
+                        <table id="booktabledata">
+                            <th>Order Id</th>
+                            <th>Book Id</th>
+                            <th>User Id</th>
+                            <th>Book Seller Id</th>
+                            <th>Status</th>  
+
+                            <tr>
+                                <td>deepaksainidarsi@gmail.com</td>
+                                <td>1</td>
+                                <td>Deepak</td>
+                                <td>9876543210</td>
+                                <td>Done</td>                                        
+                            </tr>
+                        </table>
+                    </div>
+                </div><!--End of book-->
+                <div id="admin_profile">
+                    <img src="./men.png" id="admin_photo"/>
+                        <h3>Name<h3>
+                        <h3>Email Id</h3>
+                        <h3>Phone Number</h3>
+                        <h3>Password</h3>
+                        <button id="edit_admin_button" >Edit Profile</button> 
+                    
+                </div>
+                <!--end of admin profile-->  
+                <div id="profitdiv">
+                    <div class="monthyear">
+                        <!-- <form> -->
+                        <div class="month">
+                            
+                        <label for="month">Choose a month:</label>
+                            <select name="month" id="month">
+                            <option value="1" selected>January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">Aprail</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        </div>
+                        <div class="year" style="margin-left:20px">
+                        <label for="pet-select">Choose a year:</label>
+                            <select name="year" id="year">
+                            <option value="2021" selected>2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            
+                        </select>
+                        </div>
+                        <div style="margin-left:20px;"><button id="selectbuttonmy">Select</button></div>
+                        <!-- </form> -->
+                        </div>
+                        <div id="profit_table">
+                        <table id="profittabledata">
+                            <th>Seller Id</th>
+                            <th>Total Order</th>
+                            <th>Total amount</th>
+                            <th>Commision(%)</th>
+                            <th>Profit</th> 
+                            <th>Status</th> 
+
+                            <tr>
+                                <td>deepaksainidarsi@gmail.com</td>
+                                <td>1</td>
+                                <td>100</td>
+                                <td>7</td>
+                                <td>20</td>
+                                <td>Penfing</td>                                        
+                            </tr>
+                        </table>
+                    </div>
+                        <!-- <button id="edit_admin_button" >Edit Profile</button>  -->
+                    
+                </div>
+
+<div id="id02" class="modal2">
+  <div class="containerinside" >
+               <div id="upper">
+                       <div id="content">
+                       
+                 <!-- <button onclick="document.getElementById('head1').style.display='none'" type="button" class="clos" id="clos" data-dismiss="modal">&times;</button> -->
+                 <div id="signin"><label>E-book Store</label></div>
+                 </div></div>
+              
+                    <div class="modal-bdy">
+                        <!-- <div  class="divleft1"><h1>E-book Store</h1></div> -->
+                       <div  class="divleft1">
+                            <span class="glyphicon glyphicon-user" style="margin-left:27px;top:23px;"></span>
+                            <input type="text" placeholder="Seller name" id="seller_name" />
+                        </div>
+                        <div class="divleft1">
+                     <i style="font-size:18px;top:26px;position:relative;margin-left:27px;" class="fa">&#xf0e0;</i>
+                      <input type="email" placeholder="Email" id="seller_email"/>
+                      </div>
+                       <div  class="divleft1">
+                            
+                            <i style="font-size:18px;top:28px;position:relative;margin-left:27px;"class="fa">&#xf0ea;</i>
+                            <input type="text" placeholder="Shop name" id="seller_shop_name" />
+                        </div>
+                       <div  class="divleft1">
+                           
+                            <span class="fa fa-address-card" aria-hidden="true"style="font-size:15px;margin-left:27px;top:24px;position:relative;"></span>
+                            <input type="text" placeholder="Shop Address" id="seller_shop_address" />
+                        </div> 
+                         <div  class="divleft1">
+                           
+                           <i style="font-size:15px;margin-left:27px;top:26px;position:relative;" class="fa">&#xf295;</i>
+                            <input type="number" placeholder="Comision Persentage" id="seller_comision" />
+                        </div> 
+                        <div class="divleft1">
+                       <i style="font-size:20px;margin-left:27px;top:30px;position:relative;" class="fa">&#xf095;</i>
+                      <input type="tel" placeholder="PhoneNo" id="seller_phone"/>
+                      </div>
+                      <div class="divleft1">
+                       <span style="font-size:20px;margin-left:27px;top:27px;position:relative;" class="fa">&#xf023;</span>
+                      <input type="password" placeholder="Password" id="seller_password"/>
+                      </div>
+                      
+                      
+                    <button type="button" class="loginbutton" id="seller_add_button">+ Add</button>
+                      <div style="height:1em;width:100%"></div>
+                  
+              </div>
+             </div>
+</div>
+
+
+
+
+<div id="id021" class="modal3">
+  <div class="containerinside" >
+               <div id="upper">
+                       <div id="content">
+                       
+                 <button onclick="document.getElementById('id021').style.display='none'" type="button" class="clos" id="clos" data-dismiss="modal">&times;</button>
+                 <div id="signin"><label>E-book Store</label></div>
+                 </div></div>
+              
+                    <div class="modal-bdy">
+                        <!-- <div  class="divleft1"><h1>E-book Store</h1></div> -->
+                       <div  class="divleft1">
+                            <span class="glyphicon glyphicon-user" style="margin-left:27px;top:23px;"></span>
+                            <input type="text" placeholder="Seller name" id="seller_name_update" />
+                        </div>
+                        <div class="divleft1">
+                     <i style="font-size:18px;top:26px;position:relative;margin-left:27px;" class="fa">&#xf0e0;</i>
+                      <input type="email" placeholder="Email" id="seller_email_update" readonly/>
+                      </div>
+                       <div  class="divleft1">
+                            
+                            <i style="font-size:18px;top:28px;position:relative;margin-left:27px;"class="fa">&#xf0ea;</i>
+                            <input type="text" placeholder="Shop name" id="seller_shop_name_update" />
+                        </div>
+                       <div  class="divleft1">
+                           
+                            <span class="fa fa-address-card" aria-hidden="true"style="font-size:15px;margin-left:27px;top:24px;position:relative;"></span>
+                            <input type="text" placeholder="Shop Address" id="seller_shop_address_update" />
+                        </div> 
+                        <div  class="divleft1">
+                           
+                           <i style="font-size:15px;margin-left:27px;top:26px;position:relative;" class="fa">&#xf295;</i>
+                            <input type="number" placeholder="Comision Persentage" id="seller_update_comision" />
+                        </div> 
+                        <div class="divleft1">
+                       <i style="font-size:20px;margin-left:27px;top:30px;position:relative;" class="fa">&#xf095;</i>
+                      <input type="tel" placeholder="PhoneNo" id="seller_phone_update"/>
+                      </div>
+                      <div class="divleft1">
+                       <span style="font-size:20px;margin-left:27px;top:27px;position:relative;" class="fa">&#xf023;</span>
+                      <input type="password" placeholder="Password" id="seller_password_update"/>
+                      </div>
+                      
+                      
+                    <button type="button" class="loginbutton" id="seller_update_button">+ Update</button>
+                      <div style="height:1em;width:100%"></div>
+                  
+              </div>
+             </div>
+</div>
+
+            </div><!-- End of dashboard Content -->
+        </div>  <!-- end container-->            
+    </div><!--end main-container-->
+    
+    </div> <!-- main div closed -->
+    
+    <script src="adminjs.js"></script>
+    <script src="counters.js" ></script>
+</body>
+</html
