@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-var connection_string="mongodb+srv://deepak:deepak@cluster0.t2cxn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
 var options={
     useNewUrlParser:true,
     useUnifiedTopology:true
